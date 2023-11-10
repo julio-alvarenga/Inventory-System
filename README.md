@@ -1,7 +1,14 @@
 # Inventory System
 Above are the 5 core scripts used to manage inventory slots in an extraction/scavenging game.
 
-**SlotPanelController** is the main parent class of which the remaining 4 scripts - **BagInventoryController**, **InventoryController**, **BagRaidController** and **LootController** - inherit from to utilize basic slot initialization and helper funtions.
+**SlotPanelController** is the main parent class of which the remaining 4 scripts...
+
+**BagInventoryController**
+**InventoryController**
+**BagRaidController** and
+**LootController**
+
+...inherit from to utilize basic slot initialization and helper funtions.
 
 As stated, the **SlotPanelController** script's primary focus is looking for and gathering valid components in its children that contain **SlotController** scripts.
 
