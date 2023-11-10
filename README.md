@@ -14,13 +14,17 @@ Above are the 5 core scripts used to manage inventory slots in an extraction/sca
 
 ...inherit from to utilize basic slot initialization and helper funtions.
 
-As stated, the **SlotPanelController** script's primary focus is looking for and gathering valid components in its children that contain **SlotController** scripts.
+As stated, the **SlotPanelController's** primary focus is gathering valid **SlotController** components in its children.
 
-**SlotControllers** are scripts that, when attached to UI Buttons, give the button the properties of an inventory slot. These properties include menu/controller navigation capability, marking the button as filled (including a unique image sprite to identify what item is currently in that slot), and the ability to move the item onto other slots.
+**SlotControllers** are scripts that, when attached to UI Buttons, give the button properties of an inventory slot. These properties include menu/controller navigation capability, button marking (i.e. filled, available, disabled), and the ability to move the item onto other open slots.
 
-Along with functions that find the nearest available slot, disable slots, and place items at designated slots - **SlotPanelController** also contains important data fields used to populate slots with items in the player's inventory.
+Along with functions that return values such as nearest available slot, **SlotPanelController** also contains important scriptableObjects used to populate slots with items.
 
-These core functions can be split into two categories: _Data via Ledger_ or _Data via Reference_. When populating via _ledger_, we pull slot data directly from a scriptableObject that is used as on-disk data (this data exists outside of runtime). When populating by _reference_, we only use instance copies of the _ledger_ to populate slots (this data only exists during runtime and is used at key moments to copy over to the _ledger_). This allows us to manipulate copies of the disk data without touching the underlying data.
+The functions can be split into two categories:
+
+_Data via Ledger_ or _Data via Reference_
+
+When populating via _ledger_, slot data is pulled directly from a scriptableObject that stores the state of the slots and inventory (this data exists outside of runtime and is considered 'saved to disk'). When populating by _reference_, we only use instance copies of the _ledger_ - data that, once copied, only exists during runtime. This allows us to manipulate copies of the disk data without interfering with the data on disk.
 
 With these core functions outlined, the functionality can be used in unique ways by the 4 children classes of SlotPanelController. In short:
 
