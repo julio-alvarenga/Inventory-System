@@ -1,6 +1,10 @@
 # Inventory System
 Above are the 5 core scripts used to manage inventory slots in an extraction/scavenging game.
 
+[To see these scripts in action, click here](https://www.youtube.com/watch?v=IrrSBgEFJQk)
+
+[Check out my complete portfolio here](https://portfolium.com/juliodev/portfolio)
+
 **SlotPanelController** is the main parent class of which the remaining 4 scripts...
 
 **BagInventoryController** <br />
