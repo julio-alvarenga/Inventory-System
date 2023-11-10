@@ -32,7 +32,7 @@ With these core functions outlined, the functionality can be used in unique ways
 
 **InventoryController** - like BagInventoryController, this script is used in the Main Menu to display the on-disk slot data but for their inventory instead of the bag. Note: Bag Slots are items you can take to the main gameplay scene. Inventory Slots only exist in the Main Menu and is used to show what items you can put into your bag which are then subsequently taken into the gameplay scene.
 
-**BagRaidController** - similar to BagInventoryController but this script only populates via _ledger_ ONCE upon start of the gameplay scene. Any changes there on will NOT be reflected to the _ledger_ until the level is completed. Think of this as losing your progress until the level is complete.
+**BagRaidController** - similar to BagInventoryController but this script only populates via _ledger_ ONCE upon start of the gameplay scene. Any changes there on will NOT be reflected to the _ledger_ until the level is completed. Think of this as losing your progress until the level is completed.
 
 **LootController** - paired with BagRaidController, this script controls the population of lootables in the game. This script is only meant to display in-game lootable slots whose items can put into the BagRaid version of your bag. This data technically is a pull by _reference_, wherein the reference is the slot/item data of a lootable crate.
 
